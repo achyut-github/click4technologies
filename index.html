@@ -17,6 +17,12 @@
 
   <style>
     * { font-family: 'Poppins', sans-serif; }
+    .social-icons a:hover {
+      color: #fca311;
+    }
+    .bg-dark a {
+      color: inherit;
+    }
     .navbar-brand span { color: #fca311; }
     .hero video {
       position: absolute;
@@ -48,17 +54,48 @@
 
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 fixed-top">
+<!-- Top Info Bar -->
+<div class="bg-dark text-white py-1">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center small">
+    <div>
+      <i class="fa-solid fa-envelope me-2 text-warning"></i>
+      <a href="mailto:info@click4technologies.com" class="text-white text-decoration-none me-4">info@click4technologies.com</a>
+      <i class="fa-solid fa-phone me-2 text-warning"></i>
+      <a href="tel:+919876543210" class="text-white text-decoration-none">+91 9876543210</a>
+    </div>
+    <div class="social-icons">
+      <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Click<span>4</span> Technologies</a>
+    <a class="navbar-brand fw-bold" href="#home">Click<span>4</span> Technologies</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+
+        <!-- Services Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="#services">Web Development</a></li>
+            <li><a class="dropdown-item" href="#services">Mobile App Development</a></li>
+            <li><a class="dropdown-item" href="#services">UI/UX Design</a></li>
+            <li><a class="dropdown-item" href="#services">E-Commerce Solutions</a></li>
+          </ul>
+        </li>
+
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -66,6 +103,7 @@
     </div>
   </div>
 </nav>
+
 
 <!-- Hero Section -->
 <section id="home" class="hero position-relative">
